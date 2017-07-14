@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Kitchen Sink Sample</string>
+    <string name="device_info_activity_name">Mobile Device Info</string>
+    <string name="battery_info_activity_name">Battery Info</string>
+    <string name="emdk_scan_activity_name">Scan: EMDK API</string>
+    <string name="dw_scan_activity_name">Scan: DataWedge Keystroke</string>
+    <string name="dw_scan_intent_output_activity_name">Scan: DataWedge Intent Output</string>
+
+
+
+    <string name="ean8">EAN8</string>
+    <string name="ean13">EAN13</string>
+    <string name="upca">UPCA</string>
+    <string name="upce">UPCE</string>
+    <string name="qrcode">QR Code</string>
+    <string name="code128">Code 128</string>
+    <string name="i2of5">I2 of 5</string>
+    <string name="datamatrix">Data Matrix</string>
+    <string name="setdecoder">Apply Decoders Selection</string>
+    <string name="beep">Beep</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="softscan">Scan</string>
+    <string name="data">Barcode Data:</string>
+    <string name="status">Status:</string>
+    <string name="decodersTitleText"></string>
+
+    <string name="battery_level">Battery Level: </string>
+    <string name="battery_part_number">Part Number: </string>
+    <string name="battery_serial_number">Serial Number: </string>
+    <string name="battery_mfd">Mfd Date: </string>
+    <string name="battery_cycle">Cycle: </string>
+    <string name="battery_voltage">Voltage: </string>
+    <string name="battery_rated_capacity">Rated Capacity: </string>
+    <string name="set_decoder_settings">Set Decoder Settings</string>
+    <string name="set_decoders">Set Decoders:</string>
+    <string name="item1_editbox_title">Scanned Data:</string>
+    <string name="note">Note:</string>
+    <string name="keystroke_description">DataWedge provides barcode scanning and processing services for Zebra devices running Android.
+        No coding is required for the application to scan a barcode and receive the data as key stroke output.
+        This application uses DataWedge Profile0(default). Disabling Profile0, the application would not work. </string>
+    <string name="trigger_press">Press the scan trigger/button to scan the barcode.</string>
+
+
+</resources>

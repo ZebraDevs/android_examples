@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.--><wap-provisioningdoc>
+  <characteristic type="ProfileInfo">
+    <parm name="created_wizard_version" value="6.3.0.POC"/>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="StylusAndGlove"/>
+    <parm name="ModifiedDate" value="2017-07-13 14:20:39"/>
+    <parm name="TargetSystemVersion" value="5.0"/>
+    <characteristic type="TouchMgr" version="4.2">
+      <parm name="emdk_name" value=""/>
+      <parm name="TouchAction" value="Stylus and Finger"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="GloveAndFinger"/>
+    <parm name="ModifiedDate" value="2017-07-13 14:21:19"/>
+    <parm name="TargetSystemVersion" value="5.0"/>
+    <characteristic type="TouchMgr" version="4.2">
+      <parm name="emdk_name" value=""/>
+      <parm name="TouchAction" value="Glove and Finger"/>
+    </characteristic>
+  </characteristic>
+
+</wap-provisioningdoc>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.symbol.kitchensinksample">
+
+    <uses-permission android:name="com.symbol.emdk.permission.EMDK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="com.symbol.emdk" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DeviceInfoActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/device_info_activity_name" />
+        <activity
+            android:name=".BatteryInfoActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/battery_info_activity_name" />
+        <activity
+            android:name=".ScanKeystrokeOutputActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:screenOrientation="portrait"
+            android:label="@string/dw_scan_activity_name" />
+        <activity
+            android:name=".EMDKScanActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/emdk_scan_activity_name"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ScanIntentOutputActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:screenOrientation="portrait"
+            android:label="@string/dw_scan_intent_output_activity_name"/>
+        <activity
+            android:name=".TouchManagerActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:configChanges="touchscreen"
+            android:label="Touch Manager" />
+
+        <activity android:name=".SensorActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Sensor Manager"/>
+
+    </application>
+</manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.symbol.kitchensinksample.TouchManagerActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="503dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="354dp"
+            android:layout_height="26dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Touch panel mode"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="134dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTouchManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView10"
+            android:layout_below="@+id/textView10">
+
+            <RadioButton
+                android:id="@+id/radioButtonGloveandFinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/radioButtonStylusandFinger"
+                android:layout_alignStart="@+id/radioButtonStylusandFinger"
+                android:layout_below="@+id/radioButtonStylusandFinger"
+                android:layout_marginTop="23dp"
+                android:layout_weight="1"
+                android:text="Glove and Finger"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="281dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonStylusandFinger"
+                android:layout_width="343dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView10"
+                android:layout_alignStart="@+id/textView10"
+                android:layout_below="@+id/textView10"
+                android:layout_marginTop="23dp"
+                android:layout_weight="1"
+                android:text="Stylus and Finger"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="321dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/textViewProfileStatus"
+            android:layout_below="@+id/radioGroupTouchManager"
+            android:layout_marginTop="25dp"
+            android:text="@string/status" />
+
+        <TextView
+            android:id="@+id/textViewProfileStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/radioGroupTouchManager"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="12dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
