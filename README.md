@@ -1,4 +1,4 @@
-# android_examples
+# Kitchen Sink Sample
 
 END USER LICENSE AGREEMENT (UNRESTRICTED SOFTWARE)
 
