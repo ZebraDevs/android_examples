@@ -9,9 +9,11 @@ import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
+import static com.symbol.kitchensinksample.R.id.listViewSensor;
 
 public class SensorActivity extends Activity implements SensorEventListener
 {
@@ -30,23 +32,21 @@ public class SensorActivity extends Activity implements SensorEventListener
         private Sensor sensor_proximity;
         private Sensor sensor_temperature;
         private Sensor sensor_pressure;
-        private TextView txtAzmiuth;
-        private TextView txtRoll;
-        private TextView txtPitch;
-        private TextView txtProximity;
-        private TextView txtPressure;
-        private TextView txtTemperature;
+        private ListView listSensorInfo;
+        private final int UI_AZIMUTH = 0;
+        private final int UI_ROLL = 1;
+        private final int UI_PITCH = 2;
+        private final int UI_PROXIMITY = 3;
+        private final int UI_PRESSURE = 4;
+        private final int UI_TEMP = 5;
+        private final int UI_SENSOR_LIST = 6;
+        private InfoList info_list[];
+        private KeyValueViewAdapter adapter;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_sensor);
-        txtAzmiuth = (TextView)findViewById(R.id.valueAzimith);
-        txtRoll = (TextView)findViewById(R.id.valueRoll);
-        txtPitch = (TextView)findViewById(R.id.valuePitch);
-        txtProximity = (TextView)findViewById(R.id.valueProximity);
-        txtPressure = (TextView)findViewById(R.id.valuePressure);
-        txtTemperature = (TextView)findViewById(R.id.valueTemperature);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         maximumProximitySensorRange = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY).getMaximumRange();
         sensor_accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -69,25 +69,31 @@ public class SensorActivity extends Activity implements SensorEventListener
 
         //  Find available sensors
         List<Sensor> sensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
-        TextView txtAvailableSensors = (TextView)findViewById(R.id.valueSensors);
-        String szAvailableSensors = "";
+        info_list = new InfoList[UI_SENSOR_LIST + sensorList.size() + 1];
+        info_list[UI_AZIMUTH] = new InfoList(getString(R.string.sensor_azimuth), "Not Supported");
+        info_list[UI_ROLL] = new InfoList(getString(R.string.sensor_roll), "Not Supported");
+        info_list[UI_PITCH] = new InfoList(getString(R.string.sensor_pitch), "Not Supported");
+        info_list[UI_PROXIMITY] = new InfoList(getString(R.string.sensor_proximity), "Not Supported");
+        info_list[UI_PRESSURE] = new InfoList(getString(R.string.sensor_pressure), "Not Supported");
+        info_list[UI_TEMP] = new InfoList(getString(R.string.sensor_temperature), "Not Supported");
+        info_list[UI_SENSOR_LIST] = new InfoList(getString(R.string.sensor_list), "");
         for (int i = 0; i < sensorList.size(); i++)
         {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
                 String sensorName = sensorList.get(i).getStringType() + " (" + sensorList.get(i).getName() + ")";
                 Log.i(LOG_TAG, "Sensor: " + sensorName);
-                szAvailableSensors += sensorName;
-                szAvailableSensors += "\n";
+                info_list[UI_SENSOR_LIST + 1 + i] = new InfoList(sensorList.get(i).getStringType().replace(".", "\n"), sensorList.get(i).getName());
             }
             else
             {
                 String sensorName = sensorList.get(i).getName();
                 Log.i(LOG_TAG, "Sensor: " + sensorName);
-                szAvailableSensors += sensorName;
-                szAvailableSensors += "\n";
+                info_list[UI_SENSOR_LIST + 1 + i] = new InfoList("Sensor: ", sensorList.get(i).getName());
             }
         }
-        txtAvailableSensors.setText(szAvailableSensors);
+        adapter = new KeyValueViewAdapter(this, R.layout.listview_item_key_value, info_list);
+        listSensorInfo = (ListView) findViewById(listViewSensor);
+        listSensorInfo.setAdapter(adapter);
     }
 
         @Override
@@ -108,21 +114,24 @@ public class SensorActivity extends Activity implements SensorEventListener
             float distance = event.values[0];
             if (distance >= maximumProximitySensorRange) {
                 Log.d(LOG_TAG, "Proximity: Far");
-                txtProximity.setText("Far");
+                info_list[UI_PROXIMITY].value = "Far";
             } else {
                 Log.d(LOG_TAG, "Proximity: Near");
-                txtProximity.setText("Near");
+                info_list[UI_PROXIMITY].value = "Near";
             }
+            adapter.notifyDataSetChanged();
         }
         else if (sensorType == Sensor.TYPE_AMBIENT_TEMPERATURE) {
             float temperature = event.values[0];
             Log.d(LOG_TAG, "Temperature (C): " + temperature);
-            txtTemperature.setText("" + temperature + " C");
+            info_list[UI_TEMP].value = "" + temperature + " C";
+            adapter.notifyDataSetChanged();
         }
         else if (sensorType == Sensor.TYPE_PRESSURE) {
             float atmospheric_pressure_milibar = event.values[0];
             Log.d(LOG_TAG, "Pressure (hPa): " + atmospheric_pressure_milibar);
-            txtPressure.setText("" + atmospheric_pressure_milibar + " hPa");
+            info_list[UI_PRESSURE].value = "" + atmospheric_pressure_milibar + " hPa";
+            adapter.notifyDataSetChanged();
         }
 
     }
@@ -145,19 +154,19 @@ public class SensorActivity extends Activity implements SensorEventListener
         // readings again.
         if (sensor_accelerometer != null)
             mSensorManager.registerListener(this, sensor_accelerometer,
-                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+                    SensorManager.SENSOR_DELAY_UI);
         if (sensor_magnetic_field != null)
             mSensorManager.registerListener(this, sensor_magnetic_field,
-                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+                    SensorManager.SENSOR_DELAY_UI);
         if (sensor_proximity != null)
             mSensorManager.registerListener(this, sensor_proximity,
-                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+                    SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
         if (sensor_temperature != null)
             mSensorManager.registerListener(this, sensor_temperature,
-                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+                    SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
         if (sensor_pressure != null)
             mSensorManager.registerListener(this, sensor_pressure,
-                    SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
+                    SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
     }
 
         @Override
@@ -185,15 +194,16 @@ public class SensorActivity extends Activity implements SensorEventListener
         //Log.d(LOG_TAG, "Orientation Roll (Z) = " + RadiansToDegrees(mOrientationAngles[2]));
         if (mCompassSupported)
         {
-            txtAzmiuth.setText("" + RadiansToDegrees(mOrientationAngles[0]));
-            txtPitch.setText("" + RadiansToDegrees(mOrientationAngles[1]));
-            txtRoll.setText("" + RadiansToDegrees(mOrientationAngles[2]));
+            info_list[UI_AZIMUTH].value = "" + RadiansToDegrees(mOrientationAngles[0]);
+            info_list[UI_PITCH].value = "" + RadiansToDegrees(mOrientationAngles[1]);
+            info_list[UI_ROLL].value = "" + RadiansToDegrees(mOrientationAngles[2]);
+            adapter.notifyDataSetChanged();
         }
     }
 
     private double RadiansToDegrees(float radians)
     {
-        return radians * (180.0f / Math.PI);
+        return Math.floor((radians * (180.0f / Math.PI)) * 100000) / 100000;
     }
 
     private void compassNotSupported() {

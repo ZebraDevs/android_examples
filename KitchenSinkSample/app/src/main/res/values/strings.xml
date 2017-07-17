@@ -40,5 +40,12 @@
         This application uses DataWedge Profile0(default). Disabling Profile0, the application would not work. </string>
     <string name="trigger_press">Press the scan trigger/button to scan the barcode.</string>
 
+    <string name="sensor_azimuth">Azimuth</string>
+    <string name="sensor_roll">Roll</string>
+    <string name="sensor_pitch">Pitch</string>
+    <string name="sensor_proximity">Proximity</string>
+    <string name="sensor_pressure">Pressure</string>
+    <string name="sensor_temperature">Ambient Temperature</string>
+    <string name="sensor_list">Sensors</string>
 
 </resources>
