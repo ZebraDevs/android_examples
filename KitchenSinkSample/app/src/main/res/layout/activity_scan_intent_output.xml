@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.symbol.kitchensinksample.ScanIntentOutputActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="503dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="380dp"
+            android:layout_height="39dp"
+            android:text="@string/data"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="-1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/buttonDWSoftScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/softscan"
+            android:layout_alignParentBottom="true" />
+
+        <ScrollView
+            android:id="@+id/ScrollViewScanIntent"
+            style="@android:style/Widget.ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="150px"
+            android:layout_above="@+id/buttonDWSoftScan"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView10">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            android:text="@string/trigger_press"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

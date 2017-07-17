@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.symbol.kitchensinksample.ScanKeystrokeOutputActivity">
+
+    <RelativeLayout
+        android:layout_width="366dp"
+        android:layout_height="624dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:text="@string/keystroke_description"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="-100dp"
+            android:layout_below="@+id/textView6"
+            android:layout_alignEnd="@+id/textViewName" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="358dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/item1_editbox_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="161dp"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/note"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editText3"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="22dp"
+            android:text="@string/trigger_press"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

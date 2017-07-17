@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.symbol.kitchensinksample.EMDKScanActivity">
+
+    <RelativeLayout
+        android:layout_width="365dp"
+        android:layout_height="509dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <ScrollView
+            android:id="@+id/ScrollViewEmdkApi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/buttonSoftScan">
+
+            <TextView
+                android:id="@+id/textViewData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/buttonSoftScan"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/scrollView1"
+                android:gravity="bottom"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="196dp" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textViewStatus"
+            android:layout_below="@+id/textViewStatus"
+            android:layout_marginTop="13dp"
+            android:text="@string/data"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/buttonEmdkSetDecoder"
+            android:layout_below="@+id/buttonEmdkSetDecoder"
+            android:layout_marginTop="17dp"
+            android:text="@string/status"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <Button
+            android:id="@+id/buttonSoftScan"
+            android:layout_width="372dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/softscan"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="459dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
