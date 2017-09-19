@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DataWedgeFormsApp.ScanningDisabledPage">
+	<ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            
+            <Frame OutlineColor="Accent">
+                <Label x:Name="statusLabel" TextColor="Black" FontSize="Medium">This Form Uses Datawedge Intent Output. Intent Output is disabled for the entire form. Try to Scan a Barcode, the scanner will not be enabled and you will not see a aiming beam</Label>
+            </Frame>
+            
+            <Entry x:Name="barcodeEnabledEntry" Placeholder="Try to Scan A Barcode"/>
+
+        </StackLayout>
+        
+	</ContentPage.Content>
+</ContentPage>

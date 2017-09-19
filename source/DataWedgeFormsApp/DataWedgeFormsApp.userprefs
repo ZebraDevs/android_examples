@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{D50592BB-0218-4027-9172-49688CCB3ADF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Properties/AndroidManifest.xml">
+    <Files>
+      <File FileName="DataWedgeFormsApp/DataWedgeFormsApp.cs" Line="20" Column="45" />
+      <File FileName="DataWedgeFormsApp/IndexPage.xaml.cs" Line="13" Column="13" />
+      <File FileName="DataWedgeFormsApp/KeystrokeInputPage.xaml.cs" Line="16" Column="76" />
+      <File FileName="DataWedgeFormsApp/KeystrokeInputPage.xaml" Line="19" Column="1" />
+      <File FileName="DataWedgeFormsApp/ScanningDisabledPage.xaml.cs" Line="15" Column="52" />
+      <File FileName="DataWedgeFormsApp/ScanningEnableDisableFieldPage.xaml.cs" Line="34" Column="49" />
+      <File FileName="DataWedgeFormsApp/IScanning.cs" Line="8" Column="43" />
+      <File FileName="Droid/Scanning.Droid.cs" Line="247" Column="12" />
+      <File FileName="Droid/MainActivity.cs" Line="14" Column="27" />
+      <File FileName="Droid/DataWedgeReceiver.cs" Line="49" Column="21" />
+      <File FileName="Droid/Properties/AndroidManifest.xml" Line="12" Column="12" />
+      <File FileName="Droid/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.DataWedgeFormsApp HideGettingStarted="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DataWedgeFormsApp.Droid PreferredExecutionTarget="Android.17198522511344" />
+</Properties>

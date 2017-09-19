@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DataWedgeFormsApp.ScanningEnabledPage">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            
+            <Frame OutlineColor="Accent">
+                <Label x:Name="statusLabel" TextColor="Black" FontSize="Medium">This Form Uses Datawedge Intent Output. Intent Output is enabled for the entire form. Scan a Barcode and the recieved data will be placed in the Entry Field below.</Label>
+            </Frame>
+            
+            <Entry x:Name="barcodeEnabledEntry" Placeholder="Scan A Barcode"/>
+
+        </StackLayout>
+        
+	</ContentPage.Content>
+</ContentPage>

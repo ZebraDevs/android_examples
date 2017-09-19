@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DataWedgeFormsApp.ScanningEnableDisableFieldPage">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame OutlineColor="Accent">
+                <Label x:Name="statusLabel1" TextColor="Black" FontSize="Medium">Intent Output is enabled for Green Entry Field Below. Select that Field and Scan a Barcode. The Entry Field will be updated with the received data.</Label>
+            </Frame>
+            
+            <Entry x:Name="barcodeEnabledEntry" TextColor="Green" PlaceholderColor="Green" Placeholder="Scan A Barcode"/>
+
+            <Frame OutlineColor="Accent">
+                <Label x:Name="statusLabel2" TextColor="Black" FontSize="Medium">Intent Output is disabled for Red Entry Field Below. Select that Field and try to Scan a Barcode. The scanner will not be enabled and you will not see a aiming beam</Label>
+            </Frame>
+            
+            <Entry x:Name="barcodeDisabledEntry" TextColor="Red" PlaceholderColor="Red" Placeholder="Try to Scan A Barcode"/>
+        </StackLayout>
+        
+	</ContentPage.Content>
+</ContentPage>

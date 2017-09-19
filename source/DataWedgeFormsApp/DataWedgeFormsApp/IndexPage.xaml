@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DataWedgeFormsApp.IndexPage">
+	<ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            
+           
+            <Button x:Name="scanEnabledFormBtn" Text="Scan: Intent Output (Enabled for entire form)" Clicked="OnScanEnabledFormBtnClick" Image="datawedge.png" />
+            <Button x:Name="scanDisanabledFormBtn" Text="Scan: Intent Output (Disabled for entire form)" Clicked="OnScanDisabledFormBtnClick" Image="datawedge.png" />
+            <Button x:Name="scanEnableDisableFieldBtn" Text="Scan: Intent Output (Enabled/Disabled at Entry Field)" Clicked="OnScanEnableDisableFieldBtnClick" Image="datawedge.png"/>
+            <Button x:Name="keystrokeInputBtn" Text="Scan: KeyStroke Output" Clicked="OnKeyStrokeInputBtnClick" Image="datawedge.png"/>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

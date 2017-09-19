@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DataWedgeFormsApp.KeystrokeInputPage">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            
+            <Frame OutlineColor="Accent">
+                <Label x:Name="statusLabel" TextColor="Black" FontSize="Medium">This Form uses Keystroke output, select an Entry Field below and scan a barcode. Barcode data will be updated in the selected field. </Label>
+            </Frame>
+            
+            <Entry  Placeholder="Select this Field, then Scan A Barcode"/>
+            <Entry  Placeholder="Select this Field, then Scan A Barcode"/>
+            <Entry  Placeholder="Select this Field, then Scan A Barcode"/>
+            <Entry  Placeholder="Select this Field, then Scan A Barcode"/>
+
+        </StackLayout>
+        
+	</ContentPage.Content>
+</ContentPage>
