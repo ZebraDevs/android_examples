@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataWedgeDroidConNYC2017</string>
+    <string name="scan_data_label_text">Barcode Data:</string>
+</resources>
