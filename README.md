@@ -1,9 +1,9 @@
 # android_examples
 
 
-#Setup
+# Setup
 
-##Push all three DataWedge Profiles to the DataWedge auto import folder
+## Push all three DataWedge Profiles to the DataWedge auto import folder
 
 * adb push dwprofile_DWXamarinActivity1.db /enterprise/device/settings/datawedge/autoimport
 * adb push dwprofile_DWXamarinActivity2.db /enterprise/device/settings/datawedge/autoimport
