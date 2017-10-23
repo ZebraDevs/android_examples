@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataWedgeXamarinAndroidApp/Resources/values/Strings.xml">
+    <Files>
+      <File FileName="DataWedgeXamarinAndroidApp/Resources/values/Strings.xml" Line="6" Column="71" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -3,9 +3,9 @@
 	<string name="app_name">DataWedgeXamarinAndroidApp</string>
 
 	<string name="activity1btn">Launch Activity One</string>
-	<string name="activity1instruction">This Activity is associated DataWedge Profile DWXamarinActivity1, you can scan any barcode type that is enabled in Datawedge > DWXamarinActivity1 > Decoders</string>
+	<string name="activity1instruction">This Activity is associated with DataWedge Profile DWXamarinActivity1, you can scan any barcode type that is enabled in Datawedge > DWXamarinActivity1 > Decoders</string>
 	<string name="activity2btn">Launch Activity Two</string>
-	<string name="activity2instruction">This Activity is associated DataWedge Profile DWXamarinActivity2, In this profile Code 128 has been disabled in Datawedge > DWXamarinActivity1 > Decoders</string>
+	<string name="activity2instruction">This Activity is associated with DataWedge Profile DWXamarinActivity2, In this profile Code 128 has been disabled in Datawedge > DWXamarinActivity1 > Decoders</string>
 	<string name="activity3btn">Launch Activity Three</string>
-	<string name="activity3instruction">This Activity is associated DataWedge Profile DWXamarinActivity3, In this proifle barcode scanning has been disabled</string>
+	<string name="activity3instruction">This Activity is associated with DataWedge Profile DWXamarinActivity3, In this proifle barcode scanning has been disabled</string>
 </resources>
