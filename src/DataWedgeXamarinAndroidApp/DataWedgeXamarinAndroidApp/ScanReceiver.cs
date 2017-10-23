@@ -18,7 +18,7 @@ namespace DataWedgeXamarinAndroidApp
 	public class ScanReceiver : BroadcastReceiver
 	{
  
-		private static string DATA_STRING_TAG = "com.motorolasolutions.emdk.datawedge.data_string";
+		private static string DATA_STRING_TAG = "com.symbol.datawedge.data_string";
 		
         public static string IntentAction = "com.companyname.DataWedgeXamarinAndroidApp.Data";
         public static string IntentCategory = "android.intent.category.DEFAULT";
@@ -38,6 +38,7 @@ namespace DataWedgeXamarinAndroidApp
 				if (scanDataReceived != null) {
 					scanDataReceived (this, data);
 				}
+
 			}
 		}
 	}
