@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataWedgeXamarinAndroidApp", "DataWedgeXamarinAndroidApp\DataWedgeXamarinAndroidApp.csproj", "{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF206FE-BC5B-40CB-A678-9CFFBF0C559B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
