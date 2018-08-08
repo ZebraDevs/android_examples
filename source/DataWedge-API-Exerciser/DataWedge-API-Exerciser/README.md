@@ -3,7 +3,7 @@
 *This application is provided without guarantee or warranty*
 =========================================================
 
-This application has been written to exercise the Zebra DataWedge Data Capture API (http://techdocs.zebra.com/datawedge/6-5/guide/api/).
+This application has been written to exercise the Zebra DataWedge Data Capture API (http://techdocs.zebra.com/datawedge/latest/guide/api/).
 
 Zebra DataWedge is a 'zero code' solution to capture barcode, magnetic stripe and OCR data on Zebra devices.  DataWedge is a profile-based service running on Zebra mobile computers and offers an intent based API for user applications to interact and control.  The intent based API offers limited functionality for controlling the scanning and profile aspects of DataWedge
 
@@ -58,6 +58,18 @@ Zebra DataWedge is a 'zero code' solution to capture barcode, magnetic stripe an
 * Get / Set Disabled App List
 * Switch Scanner
 * Switch Scanner Params
+
+## APIs (6.6):
+* Set Reporting Options
+* Switch Scanner by Friendly Name
+
+## APIs (6.7)
+* Set Import Config
+
+## APIs (6.8)
+* Ignore Disabled Profiles
+* Get Ignore Disabled Profiles Status
+* Set Simulscan Params
 
 ## Use:
 Hopefully the UI is self explanatory.  Returned barcode data is shown at the top of the view with some indication whether the intent (from Datawedge) was invoked through startActivity(), sendBroadcast() or startService().
